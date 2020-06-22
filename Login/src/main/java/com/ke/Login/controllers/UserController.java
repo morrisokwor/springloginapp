@@ -16,7 +16,7 @@ public class UserController {
 	@Autowired private UserService userService;
 	
 	@GetMapping("/users")
-	public String getCountries() {
+	public String getUsers() {
 		return "User";
 	}
 	
@@ -29,7 +29,7 @@ public class UserController {
 		
 		RedirectView  redirectView= new RedirectView("/login",true);
 		
-	    redir.addFlashAttribute("message",	"You successfully registered! You can now login");
+	    redir.addFlashAttribute("message",	"Registration Successful! You can now login");
 	        
 	    return redirectView;				
 	}
